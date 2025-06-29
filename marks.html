@@ -1,0 +1,43 @@
+<script>
+    let students= [
+    {
+      name:"a",
+      marks:39
+    },
+    {
+        name:"b",
+      marks:49
+
+    },
+    {
+        name:"c",
+      marks:59
+
+    },
+    {
+        name:"d",
+      marks:69
+
+    },
+    {
+        name:"e",
+      marks:79
+
+    }
+
+    ]
+
+    let sum=0
+    students.forEach((student)=>
+    {
+    //console.log(students.name)
+    
+    sum=sum+student.marks;
+})
+    
+console.log("average of students:",sum/students.length);
+    
+
+
+
+</script>

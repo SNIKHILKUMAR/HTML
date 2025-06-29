@@ -1,0 +1,37 @@
+<script>
+    let employees=[
+    {
+        name:"ram",
+        age:32,
+        salary:7000
+    },
+    { 
+        name:"shyam",
+        age:67,
+        salary:6000
+    },
+    {
+        name:"mohan",
+        age:45,
+        salary:9000
+    },
+    {
+        name:"toji",
+        age:38,
+        salary:8000
+    }
+]
+let result =employees.map(function(emp){
+    return {
+        name:emp.name,
+        age:emp.age,
+    }
+})
+console.log("filter...")
+console.log(result,"uehrf")
+let result1=employees.filter(function(emp)
+{
+    return emp.age>7000
+})
+console.log(result1,"dhbfj")
+</script>

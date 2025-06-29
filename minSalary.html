@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let students=[
+        {
+            name:"suresh",
+            age:12,
+            marks:32
+        },
+        {
+            name:"mahesh",
+            age:25,
+            marks:85
+        },
+        {
+            name:"ino",
+            age:58,
+            marks:96
+        },
+        {
+            name:"hitesh",
+            age:65,
+            marks:55
+        },
+        {
+            name:"ravi",
+            age:69,
+            marks:72
+        }
+    ]
+    let min=10000,max=0;
+    students.forEach((i)=>{
+        if(min>i.marks){
+            min=i.marks;
+        }
+        if(max<i.marks){
+            max=i.marks;
+        }
+        
+    })
+    console.log("Max : ",max,"Min : ",min);
+</script>
+</html>

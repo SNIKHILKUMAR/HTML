@@ -1,0 +1,43 @@
+<script>
+    let employees =[
+
+    {
+        name:'mohan',
+        age:21,
+        salary:40000
+
+    },
+    {
+        name:'rohan',
+        age:22,
+        salary:50000
+
+    },
+    {
+        name:'sohan',
+        age:23,
+        salary:60000
+
+    }
+
+    ]
+    function findMaxSalary(employees){
+        let pr = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                let maxSal= employees[0].salary;
+                employees.forEach((employee)=>{
+                    if(employee.salary>maxSal){
+                        maxSal= employee.salary
+                    }
+                })
+                resolve(maxSal);
+            },3000)
+            
+        })
+        console.log(pr,'pr')
+        return pr;
+    }
+    findMaxSalary(employees).then((maxSal)=>{
+        console.log(maxSal,'maxSalary')
+    })
+</script>

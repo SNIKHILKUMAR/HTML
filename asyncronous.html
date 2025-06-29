@@ -1,0 +1,45 @@
+<script>
+    function getUser(id){
+        let pr = new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                resolve({id})
+            })
+        })
+    }
+
+    function getRepos(id){
+        let pr = new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                resolve(['r1','r2','r3'])
+            },3000)
+        })
+        return pr 
+    }
+
+    function getComits(id){
+        let pr = new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                resolve(['c1','c2','c3'])
+            },3000)
+        })
+        return pr 
+    }
+
+
+
+    async function show(){
+        try{
+        let user = await getUser(1);
+        console.log(user,"user");
+        let repos = await getRepos(user.id);
+        console.log(repos,"repos");
+        let comits = await getComits(repos[1]);
+        console.log(comits,"comits");
+        }catch(error){
+            console.log(error,"error")
+        }
+
+
+    
+}
+</script>

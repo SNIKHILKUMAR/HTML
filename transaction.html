@@ -1,0 +1,43 @@
+<script>
+    let transaction=[
+    {
+        transactionId:1234,
+        transactionAmount:5000,
+        Date:"2024-12-02",
+        costumer:"ram"
+
+    },
+    {
+        transactionId:1234,
+        transactionAmount:6000,
+        Date:"2024-12-02",
+        costumer:"shyam"
+
+    },
+    {
+        transactionId:1234,
+        transactionAmount:7000,
+        Date:"2024-12-02",
+        costumer:"mohan"
+
+    },
+    {
+        transactionId:1234,
+        transactionAmount:8000,
+        Date:"2024-12-02",
+        costumer:"baba"
+
+    }
+    ]
+    let result =transaction.map((transaction)=>{
+
+        return {
+            transactionId:transaction.transactionId,
+            transactionAmount:transaction.transactionAmount,
+         
+            costumer:transaction.costumer
+    
+        }
+    })
+    console.log(result,"yudugwf")
+</script>

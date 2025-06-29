@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body> <script>
+function showMobile(showMobile){
+    let count=0; 
+    mobile.forEach(function(mobile){
+       
+     
+        
+    if(mobile.price>=12000&& mobile.price<=15000)
+ 
+
+    {
+         console.log("name:",mobile.name);
+        count ++
+        
+    }
+
+    })
+    return count ;
+
+}
+let mobile=[
+{
+   name: "Motorola",
+   price:15000,
+   brand: "mast ek dam",
+   ram:4
+   
+
+
+},{
+name: "oppo",
+   price:13000,
+   brand: "mast ",
+   ram:5
+},
+{
+    name: "vivo",
+   price:16000,
+   brand: " ek dam badiya",
+   ram:6
+   
+}
+
+
+]
+let result =showMobile(mobile);
+console.log("result",result)
+
+
+</script>
+</html>

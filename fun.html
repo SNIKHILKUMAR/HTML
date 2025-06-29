@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function showEmployee(employee){
+        employee.forEach((employee)=>{
+            console.log(employee.name)
+        })
+
+    }
+    let employee=[
+    {
+       name: "ram",
+       age: 21,
+       salary: 10000
+    },
+    {
+        name: "shyam",
+       age: 22,
+       salary: 20000
+
+    },
+    {
+        name: "mohan",
+       age: 23,
+       salary: 30000
+
+    }
+
+    
+    ]
+    showEmployee(employee);
+
+</script>
+</html>

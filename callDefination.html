@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let students= [
+    {
+      name:"a",
+      marks:39
+    },
+    {
+        name:"b",
+      marks:49
+
+    },
+    {
+        name:"c",
+      marks:59
+
+    },
+    {
+        name:"d",
+      marks:69
+
+    },
+    {
+        name:"e",
+      marks:79
+
+    }
+
+    ]
+    function showStudent(students,callback){
+        setTimeout(function(){
+            let student1=students[0]
+            let maxMarks= students[0].marks
+            students.forEach((student)=>{
+                if(student.marks> maxMarks){
+                    maxMarks=student.marks
+                    student1=student;
+                }
+
+            });
+            callback(student1)
+        },3000)
+    }  
+  
+     showStudent(students ,(student)=>{
+        console.log()
+        setTimeout(function(){
+
+        },4000)
+    })
+   
+</script>
+</html>

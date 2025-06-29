@@ -1,0 +1,16 @@
+<script>
+    function display(){
+        console.log("si is successfully")
+    }
+    function simpleInterest(p,r,t,callback){
+        setTimeout (function(){
+        let SI=p*r*t;
+        console.log(SI,"si")
+        console.log("welcome2");
+        callback()
+       
+    },4000)
+}
+    simpleInterest(10,20,56,display);
+    
+</script>

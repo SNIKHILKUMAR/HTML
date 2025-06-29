@@ -1,0 +1,30 @@
+<script>
+
+    function getmovie(id,callback){
+        setTimeout(function(){
+            callback({id:1,name:"ravan"})
+            
+        },2000)
+    }
+    function getcinema(id, callback){
+        setTimeout(function(){
+            callback(['r1','r2','r3'])
+        },2000)
+    }
+    function getboss(id, callback){
+        setTimeout(function(){
+            callback(['c1','c2','c3'])
+        },2000)
+    }
+
+
+    getmovie(1,(movie)=>{
+        console.log(movie)
+        getcinema(movie.name,(cinema)=>{
+            console.log(cinema)
+            getboss(cinema[1],(boss)=>{
+                console.log(boss)
+            })
+        })
+    })
+</script>

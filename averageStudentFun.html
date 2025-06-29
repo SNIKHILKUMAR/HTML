@@ -1,0 +1,37 @@
+<script>
+let minmarks=(students)=>{
+    let total=0;
+    students.forEach(element => {
+        total+=element.marks;
+        
+    });
+    s=total/students.length;
+
+    return s;
+
+ 
+}
+let students=[
+    {
+        name:"john",
+        age:32,
+        marks:7000
+    },
+    {
+        name:"muzan",
+        age:67,
+        marks:6000
+    },
+    {
+        name:"doji",
+        age:45,
+        marks:9000
+    },
+    {
+        name:"toji",
+        age:38,
+        marks:8000
+    }
+];
+console.log(minmarks(students));
+</script>

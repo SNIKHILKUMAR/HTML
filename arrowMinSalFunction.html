@@ -1,0 +1,45 @@
+
+<script>
+    const minSalary=(employees)=>{
+        let min=employees[0].salary; 
+        let s={};
+        employees.forEach(employee => {
+            if(min>employee.salary){
+                s={
+                    name:employee.name,
+                    age:employee.age,
+                    price:employee.salary
+                }
+            }       
+        });
+        return s;
+    }
+    
+    let employees=[
+        {
+            name:"ram",
+            age:32,
+            salary:7000
+        },
+        { 
+            name:"shyam",
+            age:67,
+            salary:6000
+        },
+        {
+            name:"mohan",
+            age:45,
+            salary:9000
+        },
+        {
+            name:"toji",
+            age:38,
+            salary:8000
+        }
+    ];
+    
+    console.log(minSalary(employees));
+    
+
+
+</script>

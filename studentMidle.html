@@ -1,0 +1,65 @@
+<script>
+    let students =[
+
+    {
+        name:'mohan',
+        age:21,
+        marks:35
+
+    },
+    {
+        name:'rohan',
+        age:22,
+        marks:50
+
+    },
+    {
+        name:'sohan',
+        age:23,
+        marks:65
+
+    },
+    {
+        name:'tohan',
+        age:24,
+        marks:57
+
+    },
+    {
+        name:'gohan',
+        age:25,
+        marks:89
+
+    },
+    {
+        name:'pohan',
+        age:24,
+        marks:50
+
+    },
+
+    ]
+    function findMarks(students){
+        let pr = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                let midMark= students[0].marks;
+                students.forEach((student)=>{
+                    if (student.marks > midMark) {
+                        midMark = student.marks;
+                    }
+                    resolve(students.filter(student => student.marks >= 50 && student.marks <= 70));
+                                }, 2000);
+                            });
+                        
+                       // findMarks(students).then(result => console.log(result));
+                      
+        })
+
+    
+        console.log(pr,'pr')
+        return pr;
+    }
+    findMarks(students).then((midMarks)=>{
+        console.log(midMarks,'maxmarks')
+    })
+</script>

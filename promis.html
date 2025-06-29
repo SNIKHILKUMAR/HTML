@@ -1,0 +1,42 @@
+<script>
+    function getMovie(id){
+        let pr = new Promise((resolve , reject)=>{
+            setTimeout(function(){
+                resolve({id:1 ,name:'MahaRaja'})
+            },2000)
+
+        })
+        return pr
+    }
+    function getTickets(id){
+        let pr = new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                resolve(['S1:Premfium','S0:Diammond','S3:Gold'])
+            },3000)
+        })
+        return pr
+    }
+    function getCinemas(id){
+        let pr= new Promise((resolve,reject)=>{
+            setTimeout(function(){
+                resolve(['PVR','GAUR','INOX'])
+            },3000)
+        })
+        return pr
+    }
+
+
+   async function show(){
+    try {
+        let movie = await getMovie(1);
+        console.log(movie,'movie');
+        let tickets = await getTickets(movie.id);
+        console.log(tickets,'tickets');
+        let cinemas = await getCinemas(tickets[1]);
+        console.log(cinemas,'cinemas');
+    }catch(error){
+        console.log(error,'error')
+    }
+}
+show();
+</script>

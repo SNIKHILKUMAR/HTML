@@ -1,0 +1,28 @@
+<script>
+    function getUser(id,callback){
+        setTimeout(function(){
+            callback({id:1,name:"ram"})
+            
+        },3000)
+    }
+    function getRepos(id, callback){
+        setTimeout(function(){
+            callback(['r1','r2','r3'])
+        },3000)
+    }
+    function getComits(id, callback){
+        setTimeout(function(){
+            callback(['c1','c2','c3'])
+        },3000)
+    }
+    getUser(1,(user)=>{
+        console.log(user)
+        getRepos(user.id,(repos)=>{
+            console.log(repos)
+            getComits(repos[1],(comits)=>{
+                console.log(comits)
+
+            })
+        })
+    })
+</script>

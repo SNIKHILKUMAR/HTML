@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body> <script>
+  
+
+
+function showMobile(mobile){
+   
+        let maxPrice= mobile[0].price;
+        mobile.forEach((mobile)=>{
+          
+    
+    if(mobile.price>maxPrice)
+    {
+        maxPrice=mobile.price;
+    }
+
+    })
+
+    return maxPrice;
+    
+}
+let mobile=[
+{
+   name: "Motorola",
+   price:5000,
+   brand: "mast ek dam",
+   ram:4
+   
+
+
+},
+{
+name: "oppo",
+   price:6000,
+   brand: "mast ",
+   ram:5
+},
+{
+    name: "vivo",
+   price:7000,
+   brand: " ek dam badiya",
+   ram:6
+   
+}
+
+
+]
+
+</script>
+</html>
